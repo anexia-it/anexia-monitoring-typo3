@@ -1,0 +1,2 @@
+# cat=basic/enable; type=string; label=Access token for the Anexia Monitoring endpoints
+accessToken =
