@@ -20,7 +20,7 @@ class Modules {
         EidUtility::initLanguage();
         EidUtility::initTCA();
 
-        $this->tsfe = $GLOBALS['TSFE'] = GeneralUtility::makeInstance('\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController', $GLOBALS['TYPO3_CONF_VARS'], 0, 0);
+        $this->tsfe = $GLOBALS['TSFE'] = GeneralUtility::makeInstance('TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController', $GLOBALS['TYPO3_CONF_VARS'], 0, 0);
 
         // Get FE User Information
         $this->tsfe->initFEuser();
@@ -32,9 +32,9 @@ class Modules {
         $this->tsfe->checkAlternativeIdMethods();
         $this->tsfe->determineId();
 
-        $this->tsfe->cObj = GeneralUtility::makeInstance('\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
-        $this->objectManager = GeneralUtility::makeInstance('\TYPO3\CMS\Extbase\Object\ObjectManager');
-        $this->extensionListUtility = $this->objectManager->get('\TYPO3\CMS\Extensionmanager\Utility\ListUtility');
+        $this->tsfe->cObj = GeneralUtility::makeInstance('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
+        $this->objectManager = GeneralUtility::makeInstance('TYPO3\CMS\Extbase\Object\ObjectManager');
+        $this->extensionListUtility = $this->objectManager->get('TYPO3\CMS\Extensionmanager\Utility\ListUtility');
 
         $this->configuration = @unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['anexia_monitoring']) or array();
     }

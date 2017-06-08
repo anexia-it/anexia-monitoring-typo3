@@ -19,7 +19,7 @@ class Up {
         EidUtility::initLanguage();
         EidUtility::initTCA();
 
-        $this->tsfe = $GLOBALS['TSFE'] = GeneralUtility::makeInstance('\TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController', $GLOBALS['TYPO3_CONF_VARS'], 0, 0);
+        $this->tsfe = $GLOBALS['TSFE'] = GeneralUtility::makeInstance('TYPO3\CMS\Frontend\Controller\TypoScriptFrontendController', $GLOBALS['TYPO3_CONF_VARS'], 0, 0);
 
         // Get FE User Information
         $this->tsfe->initFEuser();
@@ -31,7 +31,7 @@ class Up {
         $this->tsfe->checkAlternativeIdMethods();
         $this->tsfe->determineId();
 
-        $this->tsfe->cObj = GeneralUtility::makeInstance('\TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
+        $this->tsfe->cObj = GeneralUtility::makeInstance('TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer');
 
         $this->configuration = @unserialize($GLOBALS['TYPO3_CONF_VARS']['EXT']['extConf']['anexia_monitoring']) or array();
     }
