@@ -67,7 +67,7 @@ class Modules {
             'platform' => 'php',
             'platform_version' => phpversion(),
             'framework' => 'typo3',
-            'framework_version' => $t3Versions[0],
+            'framework_installed_version' => $t3Versions[0],
             'framework_newest_version' => $t3Versions[1],
         ];
 
