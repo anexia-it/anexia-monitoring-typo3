@@ -78,10 +78,10 @@ class Up {
      * Sends the HTTP access control and content-type headers to the client.
      */
     private function sendHttpHeaders() {
-        header('Access-Control-Allow-Origin', '*');
-        header('Access-Control-Allow-Credentials', 'true');
-        header('Allow', 'GET, OPTIONS');
-        header('Content-Type', 'text/plain');
+        header('Access-Control-Allow-Origin: *', true);
+        header('Access-Control-Allow-Credentials: true', true);
+        header('Allow: GET, OPTIONS', true);
+        header('Content-Type: text/plain', true);
 
         http_response_code(200);
     }

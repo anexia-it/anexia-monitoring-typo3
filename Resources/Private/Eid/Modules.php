@@ -104,10 +104,10 @@ class Modules {
      * Sends the HTTP access control and content-type headers to the client.
      */
     private function sendHttpHeaders() {
-        header('Access-Control-Allow-Origin', '*');
-        header('Access-Control-Allow-Credentials', 'true');
-        header('Allow', 'GET, OPTIONS');
-        header('Content-Type', 'application/json');
+        header('Access-Control-Allow-Origin: *', true);
+        header('Access-Control-Allow-Credentials: true', true);
+        header('Allow: GET, OPTIONS', true);
+        header('Content-Type: application/json', true);
 
         http_response_code(200);
     }
