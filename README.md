@@ -102,6 +102,7 @@ $TYPO3_CONF_VARS['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['anexia_monitori
 ## List of developers
 
 * Andreas Stocker <AStocker@anexia-it.com>, Lead developer
+* Manuel Wutte <MWutte@anexia-it.com>, TYPO3 developer
 
 ## Project related external resources
 
