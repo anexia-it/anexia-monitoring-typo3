@@ -1,0 +1,6 @@
+{
+  "name": "anexia-it/anexia_monitoring",
+  "version": "1.3.0",
+  "description": "A TYPO3 extension used to monitor updates for TYPO3 and all installed extensions. It can be also used to check if the website is alive and working correctly.",
+  "type": "typo3-cms-extension"
+}
